@@ -7,7 +7,7 @@ alwaysApply: true
 
 - Default branch is `master`. Never commit to it, never push to it, never force-push.
 - All changes land through a pull request. Merge on GitHub is the only way `master` moves.
-- Sign every commit with GPG key `D5989ED9D348AA77` (`Emad Helmi <s.emad.helmi@gmail.com>`). Do not change global git config. Use:
+- Sign every commit with GPG key `D5989ED9D348AA77`. GitHub marks a signature **Unverified** unless **author and committer** are `Emad Helmi <s.emad.helmi@gmail.com>` (the uid on that key). Do not use `emad.helmi@tabdeal.org` on this repo. Do not change global git config. This repo's local `user.email` / `user.signingkey` must stay on the Gmail identity. Use:
 
 ```bash
 git -c user.name="Emad Helmi" \

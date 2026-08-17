@@ -6,8 +6,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/EmadHelmi/BiDiSense/releases"><img src="https://img.shields.io/github/v/release/EmadHelmi/BiDiSense?display_name=tag" alt="Release"></a>
-  <a href="https://github.com/EmadHelmi/BiDiSense/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/EmadHelmi/BiDiSense/ci.yml?branch=master" alt="Build"></a>
   <a href="https://github.com/EmadHelmi/BiDiSense/blob/master/cursor.js"><img src="https://img.shields.io/badge/javascript-ES2020-blue" alt="JavaScript"></a>
   <a href="https://github.com/EmadHelmi/BiDiSense/stargazers"><img src="https://img.shields.io/github/stars/EmadHelmi/BiDiSense" alt="Stars"></a>
   <a href="https://github.com/EmadHelmi/BiDiSense/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?longCache=true" alt="License"></a>
@@ -63,7 +61,7 @@ Selector names track Cursor's DOM (`markdown-root`, `aislash-editor-input`, `tip
 ## Compatibility
 
 | Host | Status |
-| --- | --- |
+| ----------------------------------- | ------------------------------ |
 | Cursor (Chromium DevTools snippets) | Supported (`cursor.js` v7.0.0) |
 | VS Code, Windsurf, other agents | Planned as additional snippets |
 
