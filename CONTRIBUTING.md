@@ -39,7 +39,7 @@ git checkout -b feat/002-short-description
 
 Use [Conventional Commits](https://www.conventionalcommits.org/): `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `ci`, `perf`.
 
-Every commit must be **GPG-signed** as `Emad Helmi <s.emad.helmi@gmail.com>` (key `D5989ED9D348AA77`). GitHub `required_signatures` will reject unsigned commits on `master`.
+Every commit must be **GPG-signed** as `Emad Helmi <s.emad.helmi@gmail.com>` (key `D5989ED9D348AA77`). GitHub only shows **Verified** when the committer email matches a uid on that key. Signing with this key while the committer is `emad.helmi@tabdeal.org` is treated as unverified and the `required_signatures` rule rejects the PR.
 
 ```bash
 git -c user.name="Emad Helmi" \
