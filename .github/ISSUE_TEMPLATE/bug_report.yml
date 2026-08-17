@@ -1,0 +1,32 @@
+name: Bug report
+description: Report broken RTL/LTR rendering or snippet runtime issues
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you see, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: snippet-version
+    attributes:
+      label: Snippet version
+      placeholder: "7.0.0"
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host app and version
+      placeholder: "Cursor 2.x on Linux"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Paste snippet\n2. Run it\n3. Open Agent chat with mixed FA/EN"
+    validations:
+      required: true

@@ -1,0 +1,31 @@
+---
+description: Git workflow, branch names, signed commits, and protected master
+alwaysApply: true
+---
+
+# Git workflow
+
+- Default branch is `master`. Never commit to it, never push to it, never force-push.
+- All changes land through a pull request. Merge on GitHub is the only way `master` moves.
+- Sign every commit with GPG key `D5989ED9D348AA77` (`Emad Helmi <s.emad.helmi@gmail.com>`). Do not change global git config. Use:
+
+```bash
+git -c user.name="Emad Helmi" \
+    -c user.email="s.emad.helmi@gmail.com" \
+    -c user.signingkey=D5989ED9D348AA77 \
+    -c commit.gpgsign=true \
+    commit -S -m "$(cat <<'EOF'
+type: short why.
+
+EOF
+)"
+```
+
+- Branch names: `<type>/<NNN>-<kebab-description>`
+  - Types: `feat`, `fix`, `bugfix`, `imp`, `docs`, `chore`, `refactor`, `test`, `ci`, `perf`, `hotfix`
+  - `NNN` is a 3-digit increment (`001`, `002`, …). Look at existing local/remote branches before picking the next number.
+  - Description is lowercase kebab-case, no spaces.
+  - Valid: `feat/001-repo-foundation`, `bugfix/014-preview-lists`, `imp/003-agent-tables`
+  - Invalid: `feature/foo`, `feat/1-foo`, `Feat/001-Foo`, `feat/001_foo`
+- Conventional commits: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `ci`, `perf`. Reference GitHub issues as `#<n>` when relevant.
+- Prefer squash or rebase into `master` so history stays linear.
