@@ -1,0 +1,16 @@
+---
+description: BiDiSense project purpose and snippet conventions
+alwaysApply: true
+---
+
+# BiDiSense
+
+Snippets that make coding agents (currently Cursor) detect script direction and render RTL/LTR correctly. Unofficial; depends on host UI selectors that can change.
+
+- Keep `cursor.js` a single pasteable DevTools snippet. Do not split it into a bundler/app unless the user asks.
+- Preserve the file header: version, author `Emad Helmi <s.emad.helmi@gmail.com>`, MIT license, and step-by-step usage.
+- Re-running a snippet must be safe: clean up previous observers, listeners, and injected styles before applying new ones.
+- Detect direction independently per surface (agent messages, user history, live prompt, markdown preview, lists, tables).
+- Code blocks, editors, and other code UI stay LTR.
+- Bump `@version` in the snippet header when behavior changes.
+- Do not commit secrets, `.local/`, or editor junk already listed in `.gitignore`.

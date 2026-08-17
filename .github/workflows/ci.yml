@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Syntax-check snippets
+        run: node --check cursor.js
+
+      - name: Enforce branch name
+        if: github.event_name == 'pull_request'
+        env:
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          pattern='^(feat|fix|bugfix|imp|docs|chore|refactor|test|ci|perf|hotfix)/[0-9]{3}-[a-z0-9]+(-[a-z0-9]+)*$'
+          if ! printf '%s\n' "$BRANCH" | grep -Eq "$pattern"; then
+            echo "Invalid branch name: $BRANCH"
+            echo "Expected: <type>/<NNN>-<kebab-description>"
+            echo "Example: feat/001-smart-preview"
+            exit 1
+          fi
