@@ -62,15 +62,11 @@ Do not rewrite published history. Prefer squash or rebase when merging so `maste
 
 ## Stargazer chart
 
-Do not embed `starchart.cc` or `star-history.com`. GitHub no longer allows the public stargazers *list* API, so those services rate-limit or return an error in the README.
+The chart is generated daily by `.github/workflows/star-history.yml` and published to the orphan `chore/999-star-history` branch. It does not modify `master`, require local scripts, or depend on a hosted chart service.
 
-Refresh the in-repo charts from the public star **count**:
+GitHub restricts stargazer timestamps to repository admins and collaborators. Maintainers must create a fine-grained PAT for this repository with **Metadata: Read-only**, store it as the Actions secret `STAR_HISTORY_TOKEN`, and run the **Star History** workflow once after setup:
 
-```bash
-python3 scripts/star_history.py
-```
-
-Commit the updated `media/stargazers.json` and `media/stargazers-*.svg` files in the same PR.
+`Settings → Secrets and variables → Actions → New repository secret`
 
 ## Testing a snippet
 
