@@ -71,7 +71,8 @@ Selector names track Cursor's DOM (`markdown-root`, `aislash-editor-input`, `tip
 
 ```
 cursor.js                 Cursor DevTools snippet
-media/                    README logos (dark / light)
+media/                    README logos and stargazer charts
+scripts/star_history.py   Rebuilds the local stargazer SVGs
 docs/github-rulesets.md   Recommended GitHub branch rules
 .cursor/rules/            Agent workflow for this repo
 .github/                  CI, PR template, issue templates, CODEOWNERS
@@ -105,4 +106,11 @@ See [SECURITY.md](SECURITY.md) for how to report a vulnerability privately.
 
 ## Stargazers over Time
 
-[![Stargazers over time](https://starchart.cc/EmadHelmi/BiDiSense.svg?variant=adaptive)](https://starchart.cc/EmadHelmi/BiDiSense)
+<p align="center">
+  <a href="https://github.com/EmadHelmi/BiDiSense/stargazers">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./media/stargazers-dark.svg">
+      <img alt="Stargazers over time" src="./media/stargazers-light.svg">
+    </picture>
+  </a>
+</p>

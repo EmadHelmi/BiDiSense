@@ -60,6 +60,18 @@ Do not rewrite published history. Prefer squash or rebase when merging so `maste
 5. Request a review. Code owners are listed in `.github/CODEOWNERS`.
 6. Merge with **squash** or **rebase** (merge commits are not allowed while linear history is required).
 
+## Stargazer chart
+
+Do not embed `starchart.cc` or `star-history.com`. GitHub no longer allows the public stargazers *list* API, so those services rate-limit or return an error in the README.
+
+Refresh the in-repo charts from the public star **count**:
+
+```bash
+python3 scripts/star_history.py
+```
+
+Commit the updated `media/stargazers.json` and `media/stargazers-*.svg` files in the same PR.
+
 ## Testing a snippet
 
 1. Open Cursor → **Help → Toggle Developer Tools**.
