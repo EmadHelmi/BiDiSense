@@ -1,0 +1,32 @@
+name: Star History
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: star-history
+  cancel-in-progress: false
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Generate and publish charts
+        uses: ranxi2001/star-history-ci@0f86d8edecf4b8b9034da114ab5973ce5d27495f # v2.0.0
+        with:
+          repos: ${{ github.repository }}
+          token: ${{ secrets.STAR_HISTORY_TOKEN }}
+          github-token: ${{ github.token }}
+          publish-branch: chore/999-star-history
+          file-prefix: star-history
+          themes: light,dark
+          force-orphan: "true"

@@ -21,9 +21,6 @@ jobs:
       - name: Syntax-check snippets
         run: node --check cursor.js
 
-      - name: Syntax-check star-history script
-        run: python3 -m py_compile scripts/star_history.py
-
       - name: Enforce branch name
         if: github.event_name == 'pull_request'
         env:

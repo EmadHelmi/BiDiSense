@@ -6,9 +6,13 @@
 </p>
 
 <p align="center">
+  <!-- Base Language -->
   <a href="https://github.com/EmadHelmi/BiDiSense/blob/master/cursor.js"><img src="https://img.shields.io/badge/javascript-ES2020-blue" alt="JavaScript"></a>
+  <!-- Stars -->
   <a href="https://github.com/EmadHelmi/BiDiSense/stargazers"><img src="https://img.shields.io/github/stars/EmadHelmi/BiDiSense" alt="Stars"></a>
+  <!-- License -->
   <a href="https://github.com/EmadHelmi/BiDiSense/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?longCache=true" alt="License"></a>
+  <!-- Snippet Version -->
   <a href="https://github.com/EmadHelmi/BiDiSense/blob/master/cursor.js"><img src="https://img.shields.io/badge/snippet-v7.0.0-teal" alt="Snippet version"></a>
 </p>
 
@@ -60,10 +64,10 @@ Selector names track Cursor's DOM (`markdown-root`, `aislash-editor-input`, `tip
 
 ## Compatibility
 
-| Host | Status |
+| Host                                | Status                         |
 | ----------------------------------- | ------------------------------ |
 | Cursor (Chromium DevTools snippets) | Supported (`cursor.js` v7.0.0) |
-| VS Code, Windsurf, other agents | Planned as additional snippets |
+| VS Code, Windsurf, other agents     | Planned as additional snippets |
 
 **Font:** [Vazirmatn](https://github.com/rastikerdar/vazirmatn) is referenced by name. Install it locally if RTL prose looks like the system fallback.
 
@@ -71,8 +75,7 @@ Selector names track Cursor's DOM (`markdown-root`, `aislash-editor-input`, `tip
 
 ```
 cursor.js                 Cursor DevTools snippet
-media/                    README logos and stargazer charts
-scripts/star_history.py   Rebuilds the local stargazer SVGs
+media/                    README logos
 docs/github-rulesets.md   Recommended GitHub branch rules
 .cursor/rules/            Agent workflow for this repo
 .github/                  CI, PR template, issue templates, CODEOWNERS
@@ -109,8 +112,8 @@ See [SECURITY.md](SECURITY.md) for how to report a vulnerability privately.
 <p align="center">
   <a href="https://github.com/EmadHelmi/BiDiSense/stargazers">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./media/stargazers-dark.svg">
-      <img alt="Stargazers over time" src="./media/stargazers-light.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/EmadHelmi/BiDiSense/refs/heads/chore/999-star-history/star-history-dark.svg">
+      <img alt="Stargazers over time" src="https://raw.githubusercontent.com/EmadHelmi/BiDiSense/refs/heads/chore/999-star-history/star-history-light.svg">
     </picture>
   </a>
 </p>

@@ -144,6 +144,3 @@ GitHub.sublime-settings
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,intellij+all,sublimetext
 
 .local/
-
-__pycache__/
-*.py[cod]
